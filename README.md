@@ -1,46 +1,44 @@
-# Express Cart
+Express Cart
 
-Express Cart is a modern e-commerce frontend application built using React, TypeScript, and Tailwind CSS.
+A modern e-commerce frontend built with React, TypeScript, and Tailwind CSS. Designed with scalable component architecture and deployed on Vercel.
 
-## 🚀 Tech Stack
+🚀 Live Demo
 
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- shadcn/ui
+https://express-cart-mansion.vercel.app/
 
-## 📦 Features
+🧰 Tech Stack
 
-- Product listing
-- Shopping cart functionality
-- Responsive UI
-- Component-based architecture
+React
 
-## 🛠 Installation
+TypeScript
 
-Clone the repository:
+Vite
 
+Tailwind CSS
+
+shadcn/ui
+
+React Router
+
+✨ Features
+
+Product listing
+
+Shopping cart functionality
+
+Responsive UI
+
+Clean component-based structure
+
+🛠 Local Setup
 git clone https://github.com/rahulg8454/express-cart.git
-
-Navigate into the project folder:
-
 cd express-cart
-
-Install dependencies:
-
 npm install
-
-Run development server:
-
 npm run dev
 
-## 🌐 Local Development
+Runs at: http://localhost:8080
 
-The application runs at:
+👤 Author
 
-http://localhost:8080/
-
----
-
-This project is under active development.
+Rahul Gupta
+https://github.com/rahulg8454
