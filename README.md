@@ -42,3 +42,7 @@ Runs at: http://localhost:8080
 
 Rahul Gupta
 https://github.com/rahulg8454
+
+## Search Feature
+
+Live search with product preview dropdown — search by name or category with instant results in the Collections grid.
