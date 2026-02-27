@@ -5,6 +5,7 @@ import ProductGrid from "@/components/ProductGrid";
 import AboutSection from "@/components/AboutSection";
 import CartSheet from "@/components/CartSheet";
 import Footer from "@/components/Footer";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
@@ -15,6 +16,7 @@ const Index = () => {
         <FeaturesBar />
         <ProductGrid />
         <AboutSection />
+                  <ContactSection />
       </main>
       <CartSheet />
       <Footer />
