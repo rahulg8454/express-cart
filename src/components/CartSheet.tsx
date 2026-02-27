@@ -1,17 +1,18 @@
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { useCart } from "@/context/CartContext";
 import { Minus, Plus, Trash2, ShoppingBag } from "lucide-react";
-
+import { toast } from "sonner";
 const CartSheet = () => {
   const { items, isCartOpen, setIsCartOpen, updateQuantity, removeFromCart, totalPrice } = useCart();
-
+  const handleCheckout = () => {
+    toast.info("Checkout coming soon! We'll let you know when it's ready.");
+  };
   return (
     <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
       <SheetContent className="flex w-full flex-col sm:max-w-md">
         <SheetHeader>
           <SheetTitle className="font-display text-xl">Your Cart</SheetTitle>
         </SheetHeader>
-
         {items.length === 0 ? (
           <div className="flex flex-1 flex-col items-center justify-center gap-4 text-muted-foreground">
             <ShoppingBag size={48} strokeWidth={1} />
@@ -69,18 +70,20 @@ const CartSheet = () => {
                 ))}
               </div>
             </div>
-
             {/* Footer */}
             <div className="border-t border-border pt-4">
               <div className="mb-4 flex items-center justify-between">
                 <span className="text-sm text-muted-foreground">Subtotal</span>
                 <span className="text-lg font-bold text-foreground">₹{totalPrice.toLocaleString("en-IN")}</span>
               </div>
-              <button className="w-full rounded-md bg-primary py-3 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90">
+              <button
+                onClick={handleCheckout}
+                className="w-full rounded-md bg-primary py-3 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
+              >
                 Checkout
               </button>
               <p className="mt-2 text-center text-xs text-muted-foreground">
-                Shipping & taxes calculated at checkout
+                Shipping &amp; taxes calculated at checkout
               </p>
             </div>
           </>
@@ -89,5 +92,4 @@ const CartSheet = () => {
     </Sheet>
   );
 };
-
 export default CartSheet;
