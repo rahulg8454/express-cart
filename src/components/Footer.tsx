@@ -1,11 +1,24 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-
 const footerLinks = {
-  Shop: ["New Arrivals", "Best Sellers", "Sale", "Gift Cards"],
-  Help: ["FAQ", "Shipping", "Returns", "Contact Us"],
-  Company: ["About", "Careers", "Press", "Sustainability"],
+  Shop: [
+    { label: "New Arrivals", href: "#new-arrivals" },
+    { label: "Best Sellers", href: "#collections" },
+    { label: "Sale", href: "#collections" },
+    { label: "Gift Cards", href: "#contact" },
+  ],
+  Help: [
+    { label: "FAQ", href: "#contact" },
+    { label: "Shipping", href: "#contact" },
+    { label: "Returns", href: "#contact" },
+    { label: "Contact Us", href: "#contact" },
+  ],
+  Company: [
+    { label: "About", href: "#about" },
+    { label: "Careers", href: "#about" },
+    { label: "Press", href: "#about" },
+    { label: "Sustainability", href: "#about" },
+  ],
 };
-
 const Footer = () => (
   <footer className="border-t border-border bg-card">
     <div className="container mx-auto px-4 py-14 lg:px-8">
@@ -31,16 +44,15 @@ const Footer = () => (
             </span>
           </div>
         </div>
-
         {/* Links */}
         {Object.entries(footerLinks).map(([title, links]) => (
           <div key={title}>
             <h4 className="mb-3 text-sm font-semibold text-foreground">{title}</h4>
             <ul className="flex flex-col gap-2">
               {links.map((link) => (
-                <li key={link}>
-                  <a href="#" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
-                    {link}
+                <li key={link.label}>
+                  <a href={link.href} className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+                    {link.label}
                   </a>
                 </li>
               ))}
@@ -48,12 +60,10 @@ const Footer = () => (
           </div>
         ))}
       </div>
-
       <div className="mt-12 border-t border-border pt-6 text-center text-xs text-muted-foreground">
         © 2025 MAISON. All rights reserved. | Made in India 🇮🇳
       </div>
     </div>
   </footer>
 );
-
 export default Footer;
