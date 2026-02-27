@@ -33,7 +33,7 @@ const HeroSection = () => {
               Shop Now <ArrowRight size={16} />
             </a>
             <a
-              href="#"
+              href=#about"
               className="inline-flex items-center gap-2 rounded-md border border-border px-6 py-3 text-sm font-semibold text-foreground transition-all hover:bg-muted"
             >
               Learn More
