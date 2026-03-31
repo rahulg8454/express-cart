@@ -1,4 +1,4 @@
-Express Cart
+Express Cart 
 
 A modern e-commerce frontend built with React, TypeScript, and Tailwind CSS. Designed with scalable component architecture and deployed on Vercel.
 
